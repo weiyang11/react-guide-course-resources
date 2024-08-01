@@ -7,17 +7,17 @@ const app = express();
 app.use(express.static('images'));
 app.use(bodyParser.json());
 
-// Logging Middleware
+// CORS Middleware
 app.use((req, res, next) => {
-  console.log(`Received request for ${req.url}`);
-  next();
-});
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-// CORS
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*'); // allow all domains
-  res.setHeader('Access-Control-Allow-Methods', 'GET, PUT');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   next();
 });
 
@@ -55,7 +55,7 @@ app.put('/user-places', async (req, res) => {
 });
 
 // 404 Handler
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(404).json({ message: '404 - Not Found' });
 });
 
