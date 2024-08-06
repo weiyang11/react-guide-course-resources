@@ -8,7 +8,7 @@ export default function Signup() {
     const data = Object.fromEntries(fd.entries());
     data.acqusition = acquisitionChannel;
 
-    e.target.reset();
+    // e.target.reset();
 
   }
 
