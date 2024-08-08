@@ -1,6 +1,4 @@
 import classes from './Counter.module.css';
-import store from '../store/index';
-
 
 const Counter = () => {
   const toggleCounterHandler = () => {};
