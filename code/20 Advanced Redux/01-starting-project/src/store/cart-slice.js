@@ -2,18 +2,17 @@ import {createSlice } from '@reduxjs/toolkit';
 
 const cartSlice = createSlice({
   name: 'cart',
-  initialState: { items: [], totalQuantity: 0},
+  initialState: { items: [], totalQuantity: 0, change: false,},
   reducers: {
     replaceCart(state, action) {
       state.totalQuantity = action.payload.totalQuantity;
       state.items = action.payload.items;
-      console.log('hi');
-      
     },
     addItemToCart(state, action){
       const newitem = action.payload;
       const existingItem = state.items.find(item => item.id === newitem.id);
       state.totalQuantity++;
+      state.change =true
       if(!existingItem){
         state.items.push({
           id: newitem.id,
@@ -28,6 +27,7 @@ const cartSlice = createSlice({
     },
     removeItemFromCart(state,action){
       state.totalQuantity--;
+      state.change =true
       const id = action.payload;
       const existingItem = state.items.find(item => item.id === id);
       if(existingItem.quantity === 1){

@@ -54,7 +54,9 @@ function App() {
     //   //   message: 'Sending cart data failed!'
     //   // }));
     // });
-    dispatch(sendCartData(cart))
+    if (cart.change){
+      dispatch(sendCartData(cart))
+    }
   },[cart, dispatch]);
 
   return (
