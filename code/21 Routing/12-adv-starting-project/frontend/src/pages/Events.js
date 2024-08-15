@@ -25,7 +25,7 @@ export async function loader(){
     // return {isError: true, message: 'Something went wrong!'};
     // throw new Response(JSON.stringify({message: 'Something went wrong!'}), {status: 500});
     //...
-    return json({message: 'Something went wrong!'}, {status: 500});
+    throw json({message: 'Something went wrong!'}, {status: 500});
   } else {
     // const resData = await response.json();
     // // const res = new Response('any data', {state: 20});
