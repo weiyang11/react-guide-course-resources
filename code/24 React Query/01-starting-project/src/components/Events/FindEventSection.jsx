@@ -1,18 +1,20 @@
-import { useRef,useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useRef, useState } from 'react';
+import { useQuery } from '@tanstack/react-query'
+
 import { fetchEvents } from '../../util/http.js';
-import LoadingIndicator from '../UI/LoadingIndicator';
+import LoadingIndicator from '../UI/LoadingIndicator.jsx';
 import ErrorBlock from '../UI/ErrorBlock.jsx';
 import EventItem from './EventItem.jsx';
 
 export default function FindEventSection() {
   const searchElement = useRef();
+  const [searchTerm, setSearchTerm] = useState();
 
-  const[searchTerm, setSearchTerm] = useState('');
-
-  const{data, isPending, isError, error} = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ['events', {search: searchTerm}],
-    queryFn: ({signal}) => fetchEvents(signal, searchTerm),
+    queryFn: ({ signal }) => fetchEvents({ signal, searchTerm }),
+    enabled: searchTerm !== undefined,
+    // staleTime: 5000,
   })
 
   function handleSubmit(event) {
@@ -22,23 +24,23 @@ export default function FindEventSection() {
 
   let content = <p>Please enter a search term and to find events.</p>
 
-  if (isPending) {
+  if (isLoading) {
     content = <LoadingIndicator />;
   }
 
   if (isError) {
-    content = <ErrorBlock title="An error occured" message={error.info?.message || 'Failed to fetch events.'}/>
+    content = <ErrorBlock title='Sn error occurred' message={error.info?.message || 'Failed to fetch events' } />
   }
 
   if (data) {
     content = (
-      <ul className="events-list">
-        {data.map((event) => (
-          <li key={event.id}>
-            <EventItem event={event} />
-          </li>
-        ))}
-      </ul>
+    <ul className='events-list'>
+      {data.map((event) => (
+        <li key={event.id}>
+          <EventItem event={event}/>
+        </li>
+      ))}
+    </ul>
     );
   }
 
@@ -55,7 +57,7 @@ export default function FindEventSection() {
           <button>Search</button>
         </form>
       </header>
-    {content}
+      {content}
     </section>
   );
 }
