@@ -41,7 +41,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction DetailPage() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n        children: \"The Detail Page\"\n    }, void 0, false, {\n        fileName: \"/home/weiyang/code/weiyang11/react-guide-course-resources/code/25 NextJS Introduction/01-starting-project/pages/news/[newsId]/index.js\",\n        lineNumber: 2,\n        columnNumber: 10\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DetailPage);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9uZXdzL1tuZXdzSWRdL2luZGV4LmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQSxTQUFTQTtJQUNQLHFCQUFPLDhEQUFDQztrQkFBRzs7Ozs7O0FBQ2I7QUFFQSxpRUFBZUQsVUFBVUEsRUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovL25leHRqcy1jb3Vyc2UvLi9wYWdlcy9uZXdzL1tuZXdzSWRdL2luZGV4LmpzPzI4ZjYiXSwic291cmNlc0NvbnRlbnQiOlsiZnVuY3Rpb24gRGV0YWlsUGFnZSgpIHtcbiAgcmV0dXJuIDxoMT5UaGUgRGV0YWlsIFBhZ2U8L2gxPlxufVxuXG5leHBvcnQgZGVmYXVsdCBEZXRhaWxQYWdlXG4iXSwibmFtZXMiOlsiRGV0YWlsUGFnZSIsImgxIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./pages/news/[newsId]/index.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ \"./node_modules/next/router.js\");\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction DetailPage() {\n    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();\n    const newsId = router.query.newsId;\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n        children: [\n            \"The \",\n            newsId,\n            \" Detail Page\"\n        ]\n    }, void 0, true, {\n        fileName: \"/home/weiyang/code/weiyang11/react-guide-course-resources/code/25 NextJS Introduction/01-starting-project/pages/news/[newsId]/index.js\",\n        lineNumber: 8,\n        columnNumber: 10\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DetailPage);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9uZXdzL1tuZXdzSWRdL2luZGV4LmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUF1QztBQUV2QyxTQUFTQztJQUNQLE1BQU1DLFNBQVNGLHNEQUFTQTtJQUV4QixNQUFNRyxTQUFTRCxPQUFPRSxLQUFLLENBQUNELE1BQU07SUFFbEMscUJBQU8sOERBQUNFOztZQUFHO1lBQUtGO1lBQU87Ozs7Ozs7QUFDekI7QUFFQSxpRUFBZUYsVUFBVUEsRUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovL25leHRqcy1jb3Vyc2UvLi9wYWdlcy9uZXdzL1tuZXdzSWRdL2luZGV4LmpzPzI4ZjYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdXNlUm91dGVyIH0gZnJvbSAnbmV4dC9yb3V0ZXInXG5cbmZ1bmN0aW9uIERldGFpbFBhZ2UoKSB7XG4gIGNvbnN0IHJvdXRlciA9IHVzZVJvdXRlcigpO1xuXG4gIGNvbnN0IG5ld3NJZCA9IHJvdXRlci5xdWVyeS5uZXdzSWQ7XG5cbiAgcmV0dXJuIDxoMT5UaGUge25ld3NJZH0gRGV0YWlsIFBhZ2U8L2gxPlxufVxuXG5leHBvcnQgZGVmYXVsdCBEZXRhaWxQYWdlXG4iXSwibmFtZXMiOlsidXNlUm91dGVyIiwiRGV0YWlsUGFnZSIsInJvdXRlciIsIm5ld3NJZCIsInF1ZXJ5IiwiaDEiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/news/[newsId]/index.js\n");
 
 /***/ }),
 
@@ -77,6 +77,17 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ "react-dom":
+/*!****************************!*\
+  !*** external "react-dom" ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-dom");
+
+/***/ }),
+
 /***/ "react/jsx-dev-runtime":
 /*!****************************************!*\
   !*** external "react/jsx-dev-runtime" ***!
@@ -88,6 +99,17 @@ module.exports = require("react/jsx-dev-runtime");
 
 /***/ }),
 
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
+
+/***/ }),
+
 /***/ "path":
 /*!***********************!*\
   !*** external "path" ***!
@@ -96,6 +118,28 @@ module.exports = require("react/jsx-dev-runtime");
 
 "use strict";
 module.exports = require("path");
+
+/***/ }),
+
+/***/ "stream":
+/*!*************************!*\
+  !*** external "stream" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
+/***/ "zlib":
+/*!***********************!*\
+  !*** external "zlib" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
 
 /***/ })
 
