@@ -4,6 +4,7 @@ import { ChallengesContext } from '../store/challenges-context.jsx';
 import ChallengeItem from './ChallengeItem.jsx';
 import ChallengeTabs from './ChallengeTabs.jsx';
 
+
 export default function Challenges() {
   const { challenges } = useContext(ChallengesContext);
   const [selectedType, setSelectedType] = useState('active');
