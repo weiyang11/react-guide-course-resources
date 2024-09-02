@@ -10,7 +10,7 @@ import {useStore} from '../../hooks-store/store';
 
 const ProductItem = props => {
 
-  const dispatch = useStore()[1];
+  const dispatch = useStore(false)[1];
 
   // const toggleFav = useContext(ProductContext).toggleFav;
   // const dispatch = useDispatch();

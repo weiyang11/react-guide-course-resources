@@ -4,7 +4,7 @@ let globalState ={};
 let listeners = [];
 let actions = {};
 
-export const useStore =() => {
+export const useStore =(shouldListen = true) => {
     const setState = useState(globalState)[1];
 
     const dispatch = (actionIdentifier, payload) => {
@@ -17,12 +17,17 @@ export const useStore =() => {
     }
 
     useEffect(() => {
+      if(shouldListen){
+
         listeners.push(setState);
+      }
 
         return () => {
+          if(shouldListen){
             listeners = listeners.filter(li => li !== setState); // remove the listener
+          }
         }
-    }, [setState]); // [] means it will only run once
+    }, [setState, shouldListen]); // [] means it will only run once
 
     return [globalState, dispatch];
 
